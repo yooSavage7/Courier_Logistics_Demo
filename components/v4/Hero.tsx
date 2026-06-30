@@ -1,49 +1,113 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { Package } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-[420px] sm:h-[460px] flex items-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519003300449-424ad0405076?w=1920&q=80')` }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-[#0f172a]/82" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/95 via-[#0f172a]/65 to-transparent" />
+    <section
+      className="relative flex items-center"
+      style={{
+        minHeight: "380px",
+        padding: "0 64px",
+        backgroundImage:
+          "linear-gradient(90deg, rgba(8,12,18,.92) 0%, rgba(11,30,55,.55) 46%, rgba(14,44,78,.12) 100%), url('/hero-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <style>{`
+        @media (max-width: 640px) {
+          .v4-hero-inner { padding: 0 24px !important; }
+        }
+      `}</style>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16">
-        <div className="max-w-xl">
+      <div className="v4-hero-inner relative z-10 w-full pt-[66px]" style={{ padding: "0 64px" }}>
+        <div style={{ maxWidth: "560px" }}>
+          {/* H1 — no eyebrow */}
           <motion.h1
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4"
+            className="text-white"
+            style={{
+              fontFamily: "var(--font-jakarta)",
+              fontSize: "52px",
+              fontWeight: 800,
+              lineHeight: 1.04,
+              letterSpacing: "-0.01em",
+              marginBottom: "20px",
+            }}
           >
-            Track Your Shipment
+            Delivering Excellence Across Borders
           </motion.h1>
+
+          {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.28 }}
-            className="text-slate-300 text-base mb-8"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            style={{
+              fontSize: "16px",
+              fontWeight: 400,
+              color: "#9aa3af",
+              lineHeight: 1.65,
+              marginBottom: "36px",
+            }}
           >
-            Put your tracking number given by company.
+            Reliable, fast and secure logistics solutions tailored to your business needs.
           </motion.p>
+
+          {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="flex flex-wrap gap-4"
           >
+            {/* Primary button */}
             <Link
               href="/track"
-              className="inline-flex items-center gap-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-bold px-6 py-3 rounded-md text-sm transition-colors"
+              className="inline-flex items-center gap-2 text-white transition-colors"
+              style={{
+                backgroundColor: "#1668c5",
+                fontWeight: 700,
+                borderRadius: "9px",
+                padding: "14px 26px",
+                boxShadow: "0 12px 26px -10px rgba(20,100,200,.70)",
+                fontSize: "15px",
+              }}
+              onMouseEnter={(e) =>
+                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1257aa")
+              }
+              onMouseLeave={(e) =>
+                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1668c5")
+              }
             >
-              TRACK YOUR ORDER NOW <ArrowRight className="w-4 h-4" />
+              <Package className="w-4 h-4" />
+              Track Shipment
             </Link>
+
+            {/* Outline button */}
+            <button
+              className="inline-flex items-center gap-2 text-white font-bold transition-colors"
+              style={{
+                backgroundColor: "transparent",
+                border: "2px solid rgba(255,255,255,0.8)",
+                borderRadius: "9px",
+                padding: "14px 26px",
+                fontSize: "15px",
+              }}
+              onMouseEnter={(e) =>
+                ((e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255,255,255,0.10)")
+              }
+              onMouseLeave={(e) =>
+                ((e.currentTarget as HTMLButtonElement).style.backgroundColor = "transparent")
+              }
+            >
+              Get Rate Quote
+            </button>
           </motion.div>
         </div>
       </div>

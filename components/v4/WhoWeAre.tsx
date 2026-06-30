@@ -4,56 +4,139 @@ import { motion } from "framer-motion";
 
 export default function WhoWeAre() {
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section
+      id="about"
+      className="bg-white"
+      style={{ padding: "56px 64px" }}
+    >
+      <style>{`
+        @media (max-width: 640px) {
+          .v4-whoweare-inner { padding: 56px 24px !important; }
+        }
+      `}</style>
+
+      <div className="v4-whoweare-inner" style={{ padding: "0" }}>
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-[1280px] mx-auto">
+          {/* Left column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-800 mb-2">Who We Are</h2>
-            <div className="w-10 h-0.5 bg-[#2563eb] mb-5" />
-            <p className="text-slate-500 text-sm leading-relaxed mb-4">
-              Classy Courier management is the part of supply chain management that plans, implements and controls the efficient, effective forward and reverse flow and storage of goods, services and related information between the point of origin and the point of consumption.
+            {/* Eyebrow */}
+            <p
+              style={{
+                fontSize: "12px",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "0.16em",
+                color: "#1668c5",
+                marginBottom: "14px",
+              }}
+            >
+              WHO WE ARE
             </p>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              The complexity of Classy Courier can be modeled, analyzed, visualized and optimized by dedicated software. The minimization of the use of resources is a common motivation in all logistics fields.
+
+            {/* Heading */}
+            <h2
+              style={{
+                fontFamily: "var(--font-jakarta)",
+                fontSize: "32px",
+                fontWeight: 800,
+                color: "#12161d",
+                marginBottom: "8px",
+              }}
+            >
+              Classy Group of Logistics
+            </h2>
+
+            {/* Underline bar */}
+            <div
+              style={{
+                width: "46px",
+                height: "3px",
+                backgroundColor: "#1668c5",
+                borderRadius: "2px",
+                marginBottom: "20px",
+              }}
+            />
+
+            {/* Body paragraphs */}
+            <p
+              className="leading-relaxed mb-4"
+              style={{ fontSize: "15px", color: "#5c6675" }}
+            >
+              Classy Courier management is the part of supply chain management that plans, implements and controls the efficient, effective forward and reverse flow and storage of goods, services and related information between the point of origin and the point of consumption in order to meet customers&apos; requirements.
             </p>
+            <p
+              className="leading-relaxed mb-8"
+              style={{ fontSize: "15px", color: "#5c6675" }}
+            >
+              The complexity of Classy Courier can be modeled, analyzed, visualized and optimized by dedicated simulation software. The minimization of the use of resources is a common motivation in all logistics fields. A professional approach ensures every shipment reaches its destination safely and on time.
+            </p>
+
+            {/* Learn More button */}
+            <button
+              className="font-bold transition-all"
+              style={{
+                border: "2px solid #12161d",
+                color: "#12161d",
+                backgroundColor: "transparent",
+                fontSize: "14px",
+                borderRadius: "8px",
+                padding: "12px 28px",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#12161d";
+                (e.currentTarget as HTMLButtonElement).style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "transparent";
+                (e.currentTarget as HTMLButtonElement).style.color = "#12161d";
+              }}
+            >
+              Learn More About Us →
+            </button>
           </motion.div>
 
-          {/* Illustration - same as V3 */}
+          {/* Right column */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="flex justify-center"
+            className="relative"
           >
-            <div className="relative w-72 h-64">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-48 h-32 bg-[#2563eb] rounded-t-lg relative">
-                    <div className="absolute inset-x-4 top-2 bottom-0 bg-[#1d4ed8] rounded-t-sm opacity-30" />
-                    <div className="absolute top-4 left-4 grid grid-cols-3 gap-2">
-                      {Array.from({length: 6}).map((_, i) => (
-                        <div key={i} className="w-4 h-5 bg-sky-200/60 rounded-sm" />
-                      ))}
-                    </div>
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-10 bg-slate-300/50 rounded-t-sm" />
-                  </div>
-                  <div className="w-48 h-8 bg-[#1e40af]" style={{ clipPath: "polygon(0 100%, 50% 0%, 100% 100%)" }} />
-                  <div className="flex items-end gap-2 mt-1">
-                    <div className="w-16 h-8 bg-slate-300 rounded-sm flex items-center justify-center">
-                      <div className="w-10 h-5 bg-slate-400 rounded-sm" />
-                    </div>
-                    <div className="w-12 h-6 bg-amber-400 rounded-sm" />
-                  </div>
-                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-44 h-3 bg-slate-200 rounded-full blur-sm" />
-                </div>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: "4/3" }}>
+              <img
+                src="/about-gold.png"
+                alt="Classy Group of Logistics"
+                className="w-full h-full object-cover"
+              />
             </div>
+
+            {/* Decorative accent blocks */}
+            <div
+              className="absolute rounded-2xl -z-10"
+              style={{
+                width: "96px",
+                height: "96px",
+                backgroundColor: "#1668c5",
+                bottom: "-16px",
+                left: "-16px",
+              }}
+            />
+            <div
+              className="absolute rounded-xl -z-10"
+              style={{
+                width: "64px",
+                height: "64px",
+                backgroundColor: "rgba(14,17,23,0.10)",
+                top: "-16px",
+                right: "-16px",
+              }}
+            />
           </motion.div>
         </div>
       </div>

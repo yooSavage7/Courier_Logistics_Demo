@@ -1,58 +1,85 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Globe, Award } from "lucide-react";
+import { Trophy, Users, Globe, Star } from "lucide-react";
 import AnimatedCounter from "@/components/shared/AnimatedCounter";
 
 const stats = [
-  { icon: CheckCircle, value: 2000, suffix: "+", label: "COMPLETE PROJECTS" },
-  { icon: Users, value: 55, suffix: "+", label: "BEST EMPLOYEES" },
-  { icon: Globe, value: 60, suffix: "+", label: "INTERNATIONAL CLIENTS" },
-  { icon: Award, value: 80, suffix: "+", label: "AWARDS" },
+  { icon: Trophy, value: 2000, suffix: "+", label: "Complete Projects" },
+  { icon: Users, value: 55, suffix: "+", label: "Best Employees" },
+  { icon: Globe, value: 60, suffix: "+", label: "International Clients" },
+  { icon: Star, value: 80, suffix: "+", label: "Awards Won" },
 ];
 
 export default function Stats() {
   return (
-    <section className="py-4 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
+    <section style={{ backgroundColor: "#ffffff", padding: "0 64px 56px" }}>
+      <style>{`
+        @media (max-width: 640px) {
+          .stats-outer-padding { padding: 0 24px 56px !important; }
+          .stats-inner-padding { padding: 40px 24px !important; }
+          .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+      `}</style>
+      <div className="stats-outer-padding max-w-[1180px] mx-auto" style={{ padding: "0" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-[#2563eb] text-xs font-bold uppercase tracking-widest mb-2"
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+          className="stats-inner-padding"
+          style={{
+            borderRadius: "20px",
+            background: "linear-gradient(100deg, #1668c5, #2f86db)",
+            padding: "48px 64px",
+          }}
         >
-          By The Numbers
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-          className="text-center text-xl font-black text-slate-800 mb-6"
-        >
-          What Our Clients Say
-        </motion.h2>
-        <div className="bg-[#2563eb] rounded-xl">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-blue-500">
+          <div
+            className="stats-grid grid"
+            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+          >
             {stats.map((stat, i) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex flex-col items-center py-8 px-4 text-center"
+                className="flex flex-col items-center text-center"
+                style={{
+                  padding: "0 24px",
+                  borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,0.20)" : "none",
+                }}
               >
-                <stat.icon className="w-7 h-7 text-blue-200 mb-3" />
-                <div className="text-3xl lg:text-4xl font-black text-white mb-1">
+                {/* Icon circle */}
+                <div
+                  className="flex items-center justify-center rounded-full mb-4"
+                  style={{
+                    width: "52px",
+                    height: "52px",
+                    backgroundColor: "rgba(255,255,255,0.20)",
+                  }}
+                >
+                  <stat.icon style={{ width: "28px", height: "28px", color: "#ffffff" }} />
+                </div>
+                {/* Number */}
+                <div
+                  className="mb-1"
+                  style={{ fontSize: "42px", fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}
+                >
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-blue-200 text-xs font-semibold tracking-wider">{stat.label}</p>
-              </motion.div>
+                {/* Label */}
+                <p
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 500,
+                    color: "rgba(255,255,255,0.70)",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {stat.label}
+                </p>
+              </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
