@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Truck } from "lucide-react";
 
 export default function AboutUs() {
   return (
@@ -71,74 +70,15 @@ export default function AboutUs() {
           </p>
         </div>
 
-        {/* Right — CSS-only illustration */}
+        {/* Right — about banner image */}
         <div className="flex items-end justify-center">
-          <div
-            className="relative w-full flex items-center justify-center rounded-2xl overflow-hidden"
-            style={{
-              backgroundColor: "#e9f1fb",
-              height: "288px",
-              maxWidth: "420px",
-            }}
-          >
-            {/* Decorative SVG route */}
-            <svg
-              className="absolute inset-0 w-full h-full"
-              viewBox="0 0 420 288"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M 50 220 Q 160 80 370 150"
-                stroke="#c4dcf5"
-                strokeWidth="2"
-                strokeDasharray="8 5"
-                fill="none"
-              />
-              <circle cx="50" cy="220" r="5" fill="#2a8af0" opacity="0.6" />
-              <circle cx="370" cy="150" r="5" fill="#1668c5" opacity="0.8" />
-              {/* Box outline */}
-              <rect
-                x="310"
-                y="44"
-                width="60"
-                height="46"
-                rx="5"
-                stroke="#2a8af0"
-                strokeWidth="1.5"
-                fill="rgba(42,138,240,0.06)"
-                opacity="0.7"
-              />
-              <line x1="310" y1="60" x2="370" y2="60" stroke="#2a8af0" strokeWidth="1" opacity="0.4" />
-              <line x1="340" y1="44" x2="340" y2="90" stroke="#2a8af0" strokeWidth="1" opacity="0.4" />
-              {/* Small route dots */}
-              <circle cx="130" cy="148" r="3" fill="#5fa8f5" opacity="0.5" />
-              <circle cx="240" cy="112" r="3" fill="#5fa8f5" opacity="0.5" />
-            </svg>
-            {/* Truck icon center */}
-            <div className="relative flex flex-col items-center gap-3">
-              <div
-                className="flex items-center justify-center rounded-2xl"
-                style={{
-                  width: "92px",
-                  height: "92px",
-                  backgroundColor: "rgba(22,104,197,0.10)",
-                }}
-              >
-                <Truck style={{ width: "52px", height: "52px", color: "#1668c5" }} />
-              </div>
-              <p
-                className="font-semibold uppercase tracking-widest"
-                style={{
-                  fontSize: "10px",
-                  color: "#1668c5",
-                  letterSpacing: "0.14em",
-                }}
-              >
-                WORLDWIDE DELIVERY
-              </p>
-            </div>
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "480px" }}>
+            <img
+              src="/about-banner.png"
+              alt="Classy Courier Services — logistics operations"
+              className="w-full h-full object-cover"
+              style={{ display: "block" }}
+            />
           </div>
         </div>
       </motion.div>

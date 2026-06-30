@@ -25,10 +25,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "shadow-lg shadow-black/40" : ""
       }`}
-      style={{ backgroundColor: "#0e1117", height: "66px" }}
+      style={{
+        backgroundColor: scrolled ? "#0e1117" : "transparent",
+        height: "66px",
+      }}
     >
       <div className="h-full max-w-[1280px] mx-auto px-8 flex items-center justify-between">
         {/* Logo */}

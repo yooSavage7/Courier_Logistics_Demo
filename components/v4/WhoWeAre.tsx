@@ -110,7 +110,7 @@ export default function WhoWeAre() {
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: "4/3" }}>
               <img
-                src="/about-gold.png"
+                src="/about-banner.png"
                 alt="Classy Group of Logistics"
                 className="w-full h-full object-cover"
               />
