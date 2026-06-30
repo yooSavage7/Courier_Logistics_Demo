@@ -16,7 +16,7 @@ export default function WhoWeAre() {
       `}</style>
 
       <div className="v4-whoweare-inner" style={{ padding: "0" }}>
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-[1280px] mx-auto">
+        <div className="grid lg:grid-cols-2 gap-14 items-stretch max-w-[1280px] mx-auto">
           {/* Left column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -100,41 +100,29 @@ export default function WhoWeAre() {
             </button>
           </motion.div>
 
-          {/* Right column */}
+          {/* Right column — image fills full grid-cell height */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="relative"
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              borderRadius: "16px",
+              minHeight: "300px",
+            }}
           >
-            <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: "4/3" }}>
-              <img
-                src="/about-banner.png"
-                alt="Classy Group of Logistics"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Decorative accent blocks */}
-            <div
-              className="absolute rounded-2xl -z-10"
+            <img
+              src="/about-banner.png"
+              alt="Classy Group of Logistics"
               style={{
-                width: "96px",
-                height: "96px",
-                backgroundColor: "#1668c5",
-                bottom: "-16px",
-                left: "-16px",
-              }}
-            />
-            <div
-              className="absolute rounded-xl -z-10"
-              style={{
-                width: "64px",
-                height: "64px",
-                backgroundColor: "rgba(14,17,23,0.10)",
-                top: "-16px",
-                right: "-16px",
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
               }}
             />
           </motion.div>

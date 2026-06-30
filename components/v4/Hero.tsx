@@ -9,10 +9,10 @@ export default function Hero() {
     <section
       className="relative flex items-center"
       style={{
-        minHeight: "437px",
+        minHeight: "490px",
         padding: "0 64px",
         backgroundImage:
-          "linear-gradient(90deg, rgba(8,12,18,.92) 0%, rgba(11,30,55,.55) 46%, rgba(14,44,78,.12) 100%), url('/hero-main.jpg')",
+          "linear-gradient(90deg, rgba(8,12,18,.80) 0%, rgba(11,30,55,.38) 46%, rgba(14,44,78,.04) 100%), url('/hero-main.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -51,7 +51,7 @@ export default function Hero() {
             style={{
               fontSize: "16px",
               fontWeight: 400,
-              color: "#9aa3af",
+              color: "#ffffff",
               lineHeight: 1.65,
               marginBottom: "36px",
             }}
