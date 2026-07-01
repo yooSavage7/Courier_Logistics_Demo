@@ -73,7 +73,7 @@ export default function CoreCapabilities() {
             style={{
               width: "46px",
               height: "3px",
-              backgroundColor: "#1668c5",
+              backgroundColor: "#3EA2EE",
               borderRadius: "2px",
             }}
           />
@@ -100,11 +100,11 @@ export default function CoreCapabilities() {
                   style={{
                     width: "40px",
                     height: "40px",
-                    backgroundColor: "#e9f1fb",
+                    backgroundColor: "#e0f2fd",
                     borderRadius: "10px",
                   }}
                 >
-                  <item.icon style={{ width: "18px", height: "18px", color: "#1668c5" }} />
+                  <item.icon style={{ width: "18px", height: "18px", color: "#3EA2EE" }} />
                 </div>
                 <div>
                   <h4
@@ -167,11 +167,11 @@ export default function CoreCapabilities() {
                   style={{
                     width: "40px",
                     height: "40px",
-                    backgroundColor: "#e9f1fb",
+                    backgroundColor: "#e0f2fd",
                     borderRadius: "10px",
                   }}
                 >
-                  <item.icon style={{ width: "18px", height: "18px", color: "#1668c5" }} />
+                  <item.icon style={{ width: "18px", height: "18px", color: "#3EA2EE" }} />
                 </div>
                 <div>
                   <h4

@@ -17,16 +17,16 @@ import V3OfficeLocations from "@/components/v3/OfficeLocations";
 import V3Footer from "@/components/v3/Footer";
 
 // ── Version 2: New Blue/Navy Alt (v4 components) ──────────────────────────────
-import V4Navbar from "@/components/v3/Navbar";
+import V4Navbar from "@/components/v4/Navbar";
 import V4Hero from "@/components/v4/Hero";
 import V4WhoWeAre from "@/components/v4/WhoWeAre";
 import V4FeatureCards from "@/components/v4/FeatureCards";
 import V4QuoteCTA from "@/components/v4/QuoteCTA";
 import V4CoreCapabilities from "@/components/v4/CoreCapabilities";
-import V4LatestNews from "@/components/v3/LatestNews";
+import V4LatestNews from "@/components/v4/LatestNews";
 import V4Stats from "@/components/v4/Stats";
-import V4OfficeLocations from "@/components/v3/OfficeLocations";
-import V4Footer from "@/components/v3/Footer";
+import V4OfficeLocations from "@/components/v4/OfficeLocations";
+import V4Footer from "@/components/v4/Footer";
 
 // ── Version 3: Red/Navy (previously Version 1) ────────────────────────────────
 import RedNavbar from "@/components/v2/Navbar";
@@ -160,6 +160,7 @@ export default function Home() {
           <V4WhoWeAre />
           <V4FeatureCards />
           <V4QuoteCTA />
+          <div style={{ height: "64px" }} />
           <V4CoreCapabilities />
           <V4LatestNews />
           <V4Stats />

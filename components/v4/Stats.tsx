@@ -14,7 +14,7 @@ export default function Stats() {
   return (
     <section
       style={{
-        background: "linear-gradient(100deg, #1668c5, #2f86db)",
+        background: "linear-gradient(100deg, #3EA2EE, #3EA2EE)",
         padding: "48px 64px",
       }}
     >

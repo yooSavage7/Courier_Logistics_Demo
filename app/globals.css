@@ -49,10 +49,12 @@ body {
   line-height: 1.65;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
-  color: var(--text-heading);
-  text-wrap: pretty;
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-heading);
+    text-wrap: pretty;
+  }
 }
 
 html {

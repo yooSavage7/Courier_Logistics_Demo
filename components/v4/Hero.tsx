@@ -9,7 +9,7 @@ export default function Hero() {
     <section
       className="relative flex items-center"
       style={{
-        minHeight: "490px",
+        minHeight: "560px",
         padding: "0 64px",
         backgroundImage:
           "linear-gradient(90deg, rgba(8,12,18,.80) 0%, rgba(11,30,55,.38) 46%, rgba(14,44,78,.04) 100%), url('/hero-main.jpg')",
@@ -68,21 +68,21 @@ export default function Hero() {
           >
             {/* Primary button */}
             <Link
-              href="/track"
+              href="/track?v=2"
               className="inline-flex items-center gap-2 text-white transition-colors"
               style={{
-                backgroundColor: "#1668c5",
+                backgroundColor: "#3EA2EE",
                 fontWeight: 700,
                 borderRadius: "9px",
                 padding: "14px 26px",
-                boxShadow: "0 12px 26px -10px rgba(20,100,200,.70)",
+                boxShadow: "0 12px 26px -10px rgba(62,162,238,.70)",
                 fontSize: "15px",
               }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1257aa")
+                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3490D6")
               }
               onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1668c5")
+                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3EA2EE")
               }
             >
               <Package className="w-4 h-4" />

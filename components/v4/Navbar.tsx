@@ -8,7 +8,7 @@ import Link from "next/link";
 const navLinks = [
   { label: "Home", href: "/", active: true },
   { label: "Services", href: "#services" },
-  { label: "Tracking", href: "/track" },
+  { label: "Tracking", href: "/track?v=2" },
   { label: "About Us", href: "#about" },
   { label: "Contact Us", href: "#contact" },
 ];
@@ -39,7 +39,7 @@ export default function Navbar() {
           <div
             className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
             style={{
-              background: "linear-gradient(135deg, #1668c5, #2f86db)",
+              background: "linear-gradient(135deg, #3EA2EE, #3EA2EE)",
               transform: "skewX(-7deg)",
             }}
           >
@@ -82,7 +82,7 @@ export default function Navbar() {
                   className="absolute bottom-0 left-0 right-0"
                   style={{
                     height: "2px",
-                    backgroundColor: "#2a8af0",
+                    backgroundColor: "#3EA2EE",
                     borderRadius: "1px",
                   }}
                 />
@@ -95,27 +95,27 @@ export default function Navbar() {
         <div className="hidden md:flex items-center" style={{ gap: "38px" }}>
           <a
             href="tel:+447878657440"
-            className="flex items-center gap-2 text-white hover:text-[#2a8af0] transition-colors"
+            className="flex items-center gap-2 text-white hover:text-[#3EA2EE] transition-colors"
             style={{ fontSize: "14px", fontWeight: 600 }}
           >
-            <Phone className="w-3.5 h-3.5" style={{ color: "#2a8af0" }} />
+            <Phone className="w-3.5 h-3.5" style={{ color: "#3EA2EE" }} />
             +44 7878 657 440
           </a>
           <Link
             href="#"
             className="flex items-center gap-1.5 text-white transition-colors"
             style={{
-              backgroundColor: "#1668c5",
+              backgroundColor: "#3EA2EE",
               fontSize: "12px",
               fontWeight: 700,
               borderRadius: "8px",
               padding: "9px 18px",
             }}
             onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1257aa")
+              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3490D6")
             }
             onMouseLeave={(e) =>
-              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1668c5")
+              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3EA2EE")
             }
           >
             <User className="w-3.5 h-3.5" />
@@ -166,14 +166,14 @@ export default function Navbar() {
                 className="flex items-center gap-2 text-white"
                 style={{ fontSize: "14px", fontWeight: 600 }}
               >
-                <Phone className="w-3.5 h-3.5" style={{ color: "#2a8af0" }} />
+                <Phone className="w-3.5 h-3.5" style={{ color: "#3EA2EE" }} />
                 +44 7878 657 440
               </a>
               <Link
                 href="#"
                 className="flex items-center justify-center gap-1.5 text-white text-center"
                 style={{
-                  backgroundColor: "#1668c5",
+                  backgroundColor: "#3EA2EE",
                   fontSize: "12px",
                   fontWeight: 700,
                   borderRadius: "8px",

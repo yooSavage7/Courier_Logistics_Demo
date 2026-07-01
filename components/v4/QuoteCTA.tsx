@@ -70,17 +70,17 @@ export default function QuoteCTA() {
             href="#contact"
             className="inline-block text-white font-bold transition-colors"
             style={{
-              backgroundColor: "#1668c5",
+              backgroundColor: "#3EA2EE",
               borderRadius: "9px",
               padding: "14px 26px",
               fontSize: "15px",
-              boxShadow: "0 12px 26px -10px rgba(20,100,200,.70)",
+              boxShadow: "0 12px 26px -10px rgba(62,162,238,.70)",
             }}
             onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1257aa")
+              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3490D6")
             }
             onMouseLeave={(e) =>
-              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#1668c5")
+              ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3EA2EE")
             }
           >
             Get Quotes →
@@ -94,7 +94,7 @@ export default function QuoteCTA() {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           style={{
-            background: "linear-gradient(100deg, #2f86db, #1f6fc4)",
+            background: "linear-gradient(100deg, #3EA2EE, #2D8ABF)",
             padding: "56px 64px",
           }}
         >

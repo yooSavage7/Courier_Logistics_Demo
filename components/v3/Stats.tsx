@@ -13,15 +13,48 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "0 64px 56px" }}>
+    <section style={{ backgroundColor: "#ffffff", padding: "56px 64px 56px" }}>
       <style>{`
         @media (max-width: 640px) {
-          .stats-outer-padding { padding: 0 24px 56px !important; }
+          .stats-outer-padding { padding: 56px 24px 56px !important; }
           .stats-inner-padding { padding: 40px 24px !important; }
           .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
       <div className="stats-outer-padding max-w-[1180px] mx-auto" style={{ padding: "0" }}>
+        {/* Section header */}
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
+          <p
+            style={{
+              fontSize: "12px",
+              fontWeight: 700,
+              color: "#1668c5",
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              marginBottom: "10px",
+            }}
+          >
+            BY THE NUMBERS
+          </p>
+          <h2
+            style={{
+              fontFamily: "var(--font-jakarta)",
+              fontSize: "36px",
+              fontWeight: 800,
+              color: "#12161d",
+              letterSpacing: "-0.01em",
+            }}
+          >
+            What Our Clients Say
+          </h2>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

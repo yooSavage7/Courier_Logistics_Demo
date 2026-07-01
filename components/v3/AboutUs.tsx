@@ -30,7 +30,7 @@ export default function AboutUs() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6 }}
-          style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}
+          style={{ display: "flex", flexDirection: "column", justifyContent: "center", backgroundColor: "#f3f5f8" }}
         >
           <p
             className="uppercase mb-3"
@@ -49,7 +49,8 @@ export default function AboutUs() {
               lineHeight: 1.2,
             }}
           >
-            About Classy Courier Services
+            About{" "}
+            <span style={{ color: "#1668c5" }}>Classy Courier Services</span>
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: "15px", color: "#5c6675" }}>
             We are a trusted logistics partner offering reliable courier, freight and cargo
@@ -63,7 +64,7 @@ export default function AboutUs() {
           </p>
         </motion.div>
 
-        {/* Right — image fills full grid-cell height */}
+        {/* Right — transparent PNG, section bg shows through */}
         <motion.div
           className="about-img-cell"
           initial={{ opacity: 0, x: 24 }}
@@ -73,7 +74,6 @@ export default function AboutUs() {
           style={{
             position: "relative",
             overflow: "hidden",
-            borderRadius: "16px",
             minHeight: "300px",
           }}
         >
@@ -82,10 +82,12 @@ export default function AboutUs() {
             alt="Classy Courier Services — logistics operations"
             style={{
               position: "absolute",
-              inset: 0,
-              width: "100%",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-65%, -50%)",
               height: "100%",
-              objectFit: "cover",
+              width: "auto",
+              maxWidth: "none",
               display: "block",
             }}
           />

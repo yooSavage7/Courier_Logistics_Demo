@@ -1,29 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Truck, Shield, Clock } from "lucide-react";
+import { Package, Globe, Award } from "lucide-react";
 
 const cards = [
   {
-    icon: Truck,
-    title: "Air & Sea Freight",
-    caption: "International freight forwarding by air and sea with competitive rates.",
+    icon: Package,
+    title: "What We Do",
+    caption:
+      "We manage end-to-end courier and cargo logistics solutions, ensuring the right item reaches the right place at the right time.",
   },
   {
-    icon: Shield,
-    title: "Secure Handling",
-    caption: "Full customs clearance, insurance, and secure packaging for all shipments.",
+    icon: Globe,
+    title: "Why We Do It Better",
+    caption:
+      "Our global network, experienced team and cutting-edge technology allow us to outperform competitors on speed, reliability and cost.",
   },
   {
-    icon: Clock,
-    title: "On-Time Delivery",
-    caption: "Guaranteed delivery windows with real-time tracking updates.",
+    icon: Award,
+    title: "How We Succeed",
+    caption:
+      "Through innovation, continuous improvement and a relentless focus on customer satisfaction across every shipment we handle.",
   },
 ];
 
 export default function FeatureCards() {
   return (
-    <section style={{ backgroundColor: "#f3f5f8", padding: "56px 64px" }}>
+    <section style={{ backgroundColor: "#ffffff", padding: "56px 64px" }}>
       <style>{`
         @media (max-width: 640px) {
           .v4-feature-inner { padding: 56px 24px !important; }
@@ -45,7 +48,7 @@ export default function FeatureCards() {
                 border: "1px solid #e6e9ef",
                 borderRadius: "16px",
                 padding: "28px 24px",
-                borderTop: "4px solid #1668c5",
+                borderTop: "4px solid #3EA2EE",
               }}
             >
               {/* Icon tile */}
@@ -54,17 +57,17 @@ export default function FeatureCards() {
                 style={{
                   width: "48px",
                   height: "48px",
-                  backgroundColor: "#e9f1fb",
+                  backgroundColor: "#e0f2fd",
                   borderRadius: "12px",
                 }}
               >
-                <card.icon style={{ width: "20px", height: "20px", color: "#1668c5" }} />
+                <card.icon style={{ width: "20px", height: "20px", color: "#3EA2EE" }} />
               </div>
 
               {/* Card title */}
               <h3
                 className="mb-2"
-                style={{ fontSize: "17px", fontWeight: 700, color: "#1668c5" }}
+                style={{ fontSize: "17px", fontWeight: 700, color: "#3EA2EE" }}
               >
                 {card.title}
               </h3>
